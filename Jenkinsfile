@@ -110,7 +110,7 @@ pipeline {
     
        stage("stage7: Build images") {
           steps {
-              sh 'docker build -t marwnenguesmi/springapp:$BUILD_NUMBER .'
+              sh 'docker build -t marwenguesmi/springapp:$BUILD_NUMBER .'
               
              }
     
