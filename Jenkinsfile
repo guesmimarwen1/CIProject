@@ -121,8 +121,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'DockerID', variable: 'dockerhubpwd')]) {
-                        sh "docker login -u marwnenguesmi -p ${dockerhubpwd}"
-                    sh 'docker push marwnenguesmi/springapp:$BUILD_NUMBER'
+                        sh "docker login -u marwenguesmi -p ${dockerhubpwd}"
+                    sh 'docker push marwenguesmi/springapp:$BUILD_NUMBER'
                     }
                     
                 
