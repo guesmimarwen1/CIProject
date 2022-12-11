@@ -13,7 +13,7 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "adminNexus"
         
         
-        registry = "marwnenguesmi/spring"
+        registry = "marwenguesmi/spring"
         registryCredentials='dockerhub'
         dockerImage= ' '
 
