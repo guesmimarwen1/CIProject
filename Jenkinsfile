@@ -13,7 +13,7 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "adminNexus"
         
         
-        registry = "rihab96/spring"
+        registry = "marwnenguesmi/spring"
         registryCredentials='dockerHub'
         dockerImage= ' '
 
@@ -24,8 +24,8 @@ pipeline {
         stage('stage1 : Checkout GIT'){
             steps {
                 echo 'Pulling..';
-                  git branch: 'riBranch',
-                  url : 'https://github.com/hazem-soussi/terminators_5arctic1.git';
+                  git branch: 'main',
+                  url : 'https://github.com/guesmimarwen1/CIProject.git';
             }
         }
         
@@ -110,7 +110,7 @@ pipeline {
     
        stage("stage7: Build images") {
           steps {
-              sh 'docker build -t rihab96/springapp:$BUILD_NUMBER .'
+              sh 'docker build -t marwnenguesmi/springapp:$BUILD_NUMBER .'
               
              }
     
@@ -121,8 +121,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dockerID', variable: 'dockerhubpwd')]) {
-                        sh "docker login -u rihab96 -p ${dockerhubpwd}"
-                    sh 'docker push rihab96/springapp:$BUILD_NUMBER'
+                        sh "docker login -u marwnenguesmi -p ${dockerhubpwd}"
+                    sh 'docker push marwnenguesmi/springapp:$BUILD_NUMBER'
                     }
                     
                 
