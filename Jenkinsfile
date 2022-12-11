@@ -14,7 +14,7 @@ pipeline {
         
         
         registry = "marwnenguesmi/spring"
-        registryCredentials='dockerHub'
+        registryCredentials='dockerhub'
         dockerImage= ' '
 
       }
