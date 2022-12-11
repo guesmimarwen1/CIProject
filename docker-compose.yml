@@ -14,7 +14,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image: rihab96/springapp:$BUILD_NUMBER
+    image: marwenguesmi/springapp:$BUILD_NUMBER
     restart: on-failure
     env_file: ./.env
     ports:
